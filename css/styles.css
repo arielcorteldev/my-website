@@ -670,8 +670,14 @@ footer h2 {
 }
 
 footer .footer-title {
-  font-size: 60px;
-  letter-spacing: 5%;
+  container-type: inline-size;
+  width: 100%;
+  box-sizing: border-box;
+  /* padding-inline: var(--spacing-24); */
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(2.75rem, 1rem + 10cqi, 10rem);
+  letter-spacing: 0.05em;
   font-weight: var(--font-weight-600);
   color: var(--color-text);
 }
@@ -691,6 +697,7 @@ footer .container {
   justify-content: center;
   align-items: center;
   order: 1;
+  text-align: center;
 }
 
 .copyright span {
@@ -726,10 +733,6 @@ footer .container {
   
   .services-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  footer .footer-title {
-    font-size: 100px;
   }
 
   footer .container {
@@ -804,7 +807,7 @@ footer .container {
   }
 
   footer .footer-title {
-    font-size: 210px;
+    padding-inline: var(--spacing-64);
   }
 
   footer .container {
