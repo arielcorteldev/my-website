@@ -1,0 +1,253 @@
+:root {
+    /* Spacing Scale (16px base) */
+    --spacing-4: 4px;      /* 0.25rem */
+    --spacing-8: 8px;      /* 0.5rem */
+    --spacing-12: 12px;     /* 0.75rem */
+    --spacing-16: 16px;     /* 1rem */
+    --spacing-24: 24px;     /* 1.5rem */
+    --spacing-32: 32px;     /* 2rem */
+    --spacing-48: 48px;     /* 3rem */
+    --spacing-64: 64px;     /* 4rem */
+    --spacing-96: 96px;     /* 6rem */
+    --spacing-128: 128px;    /* 8rem */
+    --spacing-192: 192px;   /* 12rem */
+    --spacing-256: 256px;   /* 16rem */
+    --spacing-384: 384px;   /* 24rem */
+    --spacing-512: 512px;   /* 32rem */
+    --spacing-640: 640px;   /* 40rem */
+    --spacing-768: 768px;   /* 48rem */
+
+    /* Base Type Scale (numbered) */
+    --font-size-12: 12px;   /* 0.75rem */
+    --font-size-14: 14px;   /* 0.875rem */
+    --font-size-16: 16px;   /* 1rem */
+    --font-size-18: 18px;   /* 1.125rem */
+    --font-size-20: 20px;   /* 1.25rem */
+    --font-size-24: 24px;   /* 1.5rem */
+    --font-size-30: 30px;   /* 1.875rem */
+    --font-size-36: 36px;   /* 2.25rem */
+    --font-size-48: 48px;   /* 3rem */
+    --font-size-60: 60px;   /* 3.75rem */
+    --font-size-72: 72px;  /* 4.5rem */
+
+    /* Font Families */
+    --font-body: "Quicksand", sans-serif;
+    --font-heading: "Quicksand", sans-serif;
+
+    /* Mobile Sizes (Default - Mobile First) */
+    --font-size-h1-mobile: var(--font-size-48);  /* 48px */ 
+    --font-size-h2-mobile: var(--font-size-36);  /* 36px */
+    --font-size-h3-mobile: var(--font-size-30);  /* 30px */
+    --font-size-h4-mobile: var(--font-size-24);  /* 24px */
+    --font-size-h5-mobile: var(--font-size-20);  /* 20px */
+    --font-size-h6-mobile: var(--font-size-18);  /* 18px */
+  
+    /* Desktop Sizes */
+    --font-size-h1-desktop: var(--font-size-72); /* 72px */
+    --font-size-h2-desktop: var(--font-size-60);  /* 60px */
+    --font-size-h3-desktop: var(--font-size-48);  /* 48px */
+    --font-size-h4-desktop: var(--font-size-36);  /* 36px */
+    --font-size-h5-desktop: var(--font-size-30);  /* 30px */
+    --font-size-h6-desktop: var(--font-size-24);  /* 24px */ 
+  
+
+    /* Body Text Sizes (same on mobile/desktop usually) */
+    --font-size-body: var(--font-size-16);      /* 16px */
+    --font-size-body-xs: var(--font-size-12);  /* 12px */
+    --font-size-body-sm: var(--font-size-14);   /* 14px */
+    --font-size-body-md: var(--font-size-18);   /* 18px */
+    --font-size-body-lg: var(--font-size-20);   /* 20px */
+
+    /* Font Weights */
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+    /* Brand Colors */
+
+    /* Primary */
+    --color-primary-900: #242121;
+    --color-primary-800: #383636;
+    --color-primary-700: #4E4C4C;
+    --color-primary-600: #656363;
+    --color-primary-500: #7D7B7B;
+    --color-primary-400: #959494;
+    --color-primary-300: #AFAEAE;
+    --color-primary-200: #C9C8C8;
+    --color-primary-100: #E4E3E3;
+    --color-primary-white: #FCFFFD;
+    --color-primary-black: #100E0E;
+
+
+    /* Accents */
+    --color-accent-red-950: #460809;
+    --color-accent-red-900: #82181A;
+    --color-accent-red-800: #9F0712;
+    --color-accent-red-700: #C10007;
+    --color-accent-red-600: #E7000B;
+    --color-accent-red-500: #FB2C36;
+    --color-accent-red-400: #FF6467;
+    --color-accent-red-300: #FFA2A2;
+    --color-accent-red-200: #FFC9C9;
+    --color-accent-red-100: #FFE2E2;
+    --color-accent-red-50: #FEF2F2;
+
+    --color-accent-green-950: #032E15;
+    --color-accent-green-900: #0D542B;
+    --color-accent-green-800: #016630;
+    --color-accent-green-700: #008236;
+    --color-accent-green-600: #00A63E;
+    --color-accent-green-500: #00C950;
+    --color-accent-green-400: #05DF72;
+    --color-accent-green-300: #7BF1A8;
+    --color-accent-green-200: #B9F8CF;
+    --color-accent-green-100: #DCFCE7;
+    --color-accent-green-50: #F0FDF4;
+
+    --color-accent-yellow-950: #461901;
+    --color-accent-yellow-900: #7B3306;
+    --color-accent-yellow-800: #973C00;
+    --color-accent-yellow-700: #BB4D00;
+    --color-accent-yellow-600: #E17100;
+    --color-accent-yellow-500: #FE9A00;
+    --color-accent-yellow-400: #FFB900;
+    --color-accent-yellow-300: #FFD230;
+    --color-accent-yellow-200: #FEE685;
+    --color-accent-yellow-100: #FEF3C6;
+    --color-accent-yellow-50: #FFFBEB;
+
+    --color-accent-pink-950: #4E0055;
+    --color-accent-pink-900: #75117E;
+    --color-accent-pink-800: #8C0E9A;
+    --color-accent-pink-700: #A90EBD;
+    --color-accent-pink-600: #CE1FEA;
+    --color-accent-pink-500: #DF36FF;
+    --color-accent-pink-400: #ED6DFF;
+    --color-accent-pink-300: #F2A3FF;
+    --color-accent-pink-200: #F7CCFF;
+    --color-accent-pink-100: #FAE6FF;
+    --color-accent-pink-50: #FEF3FF;
+
+     /* ==================== */
+    /* SEMANTIC ALIASES     */
+    /* (Use these in code)  */
+    /* ==================== */
+    
+    /* States */
+    --color-error: var(--color-accent-red-500);
+    --color-sucess: var(--color-accent-green-400);
+
+
+    /* SHADOWS */
+    /* 
+    SHADOW SCALE REFERENCE:
+    --shadow-xs:  Subtle, barely visible (hover states, input focus)
+    --shadow-sm:  Light elevation (buttons, small cards)
+    --shadow-md:  Medium elevation (cards, panels) ← DEFAULT
+    --shadow-lg:  High elevation (dropdowns, popovers)
+    --shadow-xl:  Highest elevation (modals, dialogs)
+  */
+
+    /* Base Shadows */
+    --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 15px 35px rgba(0, 0, 0, 0.3);
+
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 24px;
+
+    /* Transitions */
+    --duration-fast: 150ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+    
+
+
+    /* ==================== */
+    /* LIGHT MODE (DEFAULT) */
+    /* ==================== */
+
+    --color-bg: var(--color-primary-white);
+    --color-bg-invert: var(--color-primary-900);
+    --color-text: var(--color-primary-900);
+    --color-text-invert: var(--color-primary-white);
+    --color-text-secondary: var(--color-primary-700);
+    --color-text-tertiary: var(--color-primary-500);
+
+    /* Button colors light mode */
+    --btn-focus-color: var(--color-primary-900);
+    --btn-primary-bg: var(--color-primary-900);
+    --btn-primary-text: var(--color-primary-white);
+    --btn-primary-bg-hover: var(--color-primary-black);
+
+    --btn-secondary-bg: var(--color-primary-100);
+    --btn-secondary-text: var(--color-primary-900);
+    --btn-secondary-border: 1px solid var(--color-primary-900);
+    --btn-secondary-bg-hover: var(--color-primary-white);
+
+    --btn-tertiary-bg: transparent;
+    --btn-teritary-text: var(--color-primary-900)
+}
+
+/* ==================== */
+/* DARK MODE            */
+/* ==================== */
+
+:root.dark-mode {
+  --color-bg: var(--color-primary-900);
+  --color-bg-invert: var(--color-primary-white);
+  --color-text: var(--color-primary-white);
+  --color-text-invert: var(--color-primary-900);
+  --color-text-secondary: var(--color-primary-300);
+  --color-text-tertiary: var(--color-primary-200);
+
+  /* Button colors dark mode */
+  --btn-focus-color: var(--color-primary-white);
+  --btn-primary-bg: var(--color-primary-100);
+  --btn-primary-text: var(--color-primary-900);
+  --btn-primary-bg-hover: var(--color-primary-white);
+
+  --btn-secondary-bg: var(--color-primary-900);
+  --btn-secondary-text: var(--color-primary-white);
+  --btn-secondary-border: 1px solid var(--color-primary-white);
+  --btn-secondary-bg-hover: var(--color-primary-white);
+
+  --btn-tertiary-bg: transparent;
+  --btn-teritary-text: var(--color-primary-white)
+}
+
+
+/* Dark Mode - System Preference (only if no manual override) */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-mode):not(.dark-mode) {
+    --color-bg: var(--color-primary-900);
+    --color-bg-invert: var(--color-primary-white);
+    --color-text: var(--color-primary-white);
+    --color-text-invert: var(--color-primary-900);
+    --color-text-secondary: var(--color-primary-300);
+    --color-text-tertiary: var(--color-primary-200);
+
+    /* Button colors dark mode */
+    --btn-focus-color: var(--color-primary-white);
+    --btn-primary-bg: var(--color-primary-100);
+    --btn-primary-text: var(--color-primary-900);
+    --btn-primary-bg-hover: var(--color-primary-white);
+
+    --btn-secondary-bg: var(--color-primary-900);
+    --btn-secondary-text: var(--color-primary-white);
+    --btn-secondary-border: 1px solid var(--color-primary-white);
+
+    --btn-tertiary-bg: transparent;
+    --btn-teritary-text: var(--color-primary-white)
+  }
+}

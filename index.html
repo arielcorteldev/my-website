@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ariel cortel</title>
+    <meta
+      name="description"
+      content="Ariel Cortel — design engineer. I design the system. I build the solution."
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/profile-image.webp"
+      fetchpriority="high"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+      <nav class="navbar">
+        <a class="logo-name" href="#hero">
+          <img
+            class="logo"
+            data-light-src="./assets/logos/logo-black.webp"
+            data-dark-src="./assets/logos/logo-white.webp"
+            alt="My Logo"
+            height="75"
+            width="75"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+          <span>ariel cortel</span>
+        </a>
+        <div class="navlinks">
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#about-me">About Me</a>
+          <a href="#contact-me" class="btn btn-primary btn-md">Get in touch</a>
+          <div class="theme-toggle-container">
+            <input
+              type="checkbox"
+              class="checkbox js-theme-toggle"
+              id="theme-toggle-desktop"
+              aria-label="Toggle dark mode"
+            />
+            <label for="theme-toggle-desktop" class="checkbox-label">
+              <span class="sr-only">Toggle dark mode</span>
+              <svg
+                class="theme-icon"
+                aria-hidden="true"
+                focusable="false"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M21.75 15.5a.75.75 0 0 0-.98-.44 7.5 7.5 0 0 1-9.83-9.83.75.75 0 0 0-.94-.98 9.75 9.75 0 1 0 11.75 11.75Z"
+                />
+              </svg>
+              <svg
+                class="theme-icon"
+                aria-hidden="true"
+                focusable="false"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12Zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM3 11a1 1 0 0 1 1 1 1 1 0 1 1-2 0 1 1 0 0 1 1-1Zm18 0a1 1 0 0 1 1 1 1 1 0 1 1-2 0 1 1 0 0 1 1-1ZM5.64 4.22a1 1 0 0 1 1.41 0l.71.71a1 1 0 1 1-1.41 1.41l-.71-.71a1 1 0 0 1 0-1.41Zm12 12a1 1 0 0 1 1.41 0l.71.71a1 1 0 1 1-1.41 1.41l-.71-.71a1 1 0 0 1 0-1.41ZM4.22 18.36a1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1-1.41 0Zm12-12a1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1-1.41 0Z"
+                />
+              </svg>
+              <span class="ball"></span>
+            </label>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="nav-menu-btn"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+          id="menu-btn"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M4 6H20M4 12H20M4 18H20"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile navigation drawer (slides in from top) -->
+    <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+    <div
+      class="drawer"
+      id="mobile-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
+      <div class="drawer-inner">
+        <div class="mobile-header">
+          <a class="logo-name" href="#hero">
+            <img
+              class="logo"
+              data-light-src="./assets/logos/logo-black.webp"
+              data-dark-src="./assets/logos/logo-white.webp"
+              alt="My Logo"
+              height="75"
+              width="75"
+              loading="lazy"
+              decoding="async"
+            />
+            <span>ariel cortel</span>
+          </a>
+          <button
+            type="button"
+            class="drawer-close"
+            aria-label="Close menu"
+            id="drawer-close-btn"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M6 6L18 18M18 6L6 18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+        
+        <nav class="drawer-nav" aria-label="Mobile menu">
+          <a href="#projects" class="drawer-link">Projects</a>
+          <a href="#services" class="drawer-link">Services</a>
+          <a href="#about-me" class="drawer-link">About Me</a>
+          <a href="#contact-me" class="btn btn-primary drawer-cta">Get in touch</a>
+          <div class="theme-toggle-container">
+            <input
+              type="checkbox"
+              class="checkbox js-theme-toggle"
+              id="theme-toggle-mobile"
+              aria-label="Toggle dark mode"
+            />
+            <label for="theme-toggle-mobile" class="checkbox-label">
+              <span class="sr-only">Toggle dark mode</span>
+              <svg
+                class="theme-icon"
+                aria-hidden="true"
+                focusable="false"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M21.75 15.5a.75.75 0 0 0-.98-.44 7.5 7.5 0 0 1-9.83-9.83.75.75 0 0 0-.94-.98 9.75 9.75 0 1 0 11.75 11.75Z"
+                />
+              </svg>
+              <svg
+                class="theme-icon"
+                aria-hidden="true"
+                focusable="false"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12Zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM3 11a1 1 0 0 1 1 1 1 1 0 1 1-2 0 1 1 0 0 1 1-1Zm18 0a1 1 0 0 1 1 1 1 1 0 1 1-2 0 1 1 0 0 1 1-1ZM5.64 4.22a1 1 0 0 1 1.41 0l.71.71a1 1 0 1 1-1.41 1.41l-.71-.71a1 1 0 0 1 0-1.41Zm12 12a1 1 0 0 1 1.41 0l.71.71a1 1 0 1 1-1.41 1.41l-.71-.71a1 1 0 0 1 0-1.41ZM4.22 18.36a1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1-1.41 0Zm12-12a1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1-1.41 0Z"
+                />
+              </svg>
+              <span class="ball"></span>
+            </label>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main id="main" tabindex="-1">
+      <!-- Hero Section -->
+      <section id="hero" data-reveal>
+        <img
+          id="profile-image"
+          src="./assets/images/profile-image.webp"
+          alt="Portrait of Ariel Cortel"
+          width="200"
+          height="200"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="hero-text">
+          <h1>ariel cortel</h1>
+          <div class="sub-text">
+            <p id="position">Design Engineer</p>
+            <p>I design the system. I build the solution.</p>
+          </div>
+        </div>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn btn-secondary btn-lg">View my work</a>
+          <a href="#contact-me" class="btn btn-primary btn-lg">Get in touch</a>
+        </div>
+      </section>
+
+      <!-- Projects Section  -->
+      <section id="projects" data-reveal>
+        <h2>my projects</h2>
+        <div class="container">
+          <div class="project-container" data-reveal>
+            <div class="thumbnail">
+              <img
+                src="./assets/images/rvs-thumbnail.webp"
+                alt="Records Verification System project thumbnail"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-details">
+              <h3 class="project-title">Records Verification System</h3>
+
+              <div class="tech-stack">
+                <p>Python</p>
+                <p>PySide6</p>
+                <p>Flask</p>
+              </div>
+
+              <div class="texts">
+                <p class="problem">
+                  <span>Problem: </span>The City Civil Registrar's Office of
+                  Maasin City relied entirely on manual methods to verify
+                  civic records — flipping through aging record books,
+                  handwritten notes, and manual data entry. The process was
+                  slow, error-prone, and inconsistent, leading to long queues,
+                  delayed releases, and growing frustration for both staff and
+                  citizens.
+                </p>
+                <p class="solution">
+                  <span>What I did: </span>I designed and developed the
+                  Records Verification System — a desktop application that
+                  digitizes the full records verification workflow for vital
+                  documents (Birth, Death, and Marriage). It replaces manual
+                  cross-checking with a structured digital process,
+                  eliminating clerical errors, reducing fraud risk, and
+                  cutting wait times for citizens.
+                </p>
+              </div>
+
+              <a href="https://github.com/arielcorteldev/rvs-app" class="btn btn-sm btn-secondary">View in Github</a>
+            </div>
+          </div>
+
+          <div class="project-container reverse-grid" data-reveal>
+            <div class="thumbnail reverse-item">
+              <img
+                src="./assets/images/qms-project-thumbnail.webp"
+                alt="Queue Management System project thumbnail"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-details">
+              <h3 class="project-title">Queue Management System</h3>
+
+              <div class="tech-stack">
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+              </div>
+
+              <div class="texts">
+                <p class="problem">
+                  <span>Problem: </span>The City Civil Registrar's Office of
+                  Maasin City had no structured system for managing walk-in
+                  clients. Staff manually controlled the flow of people,
+                  leading to disorganization, uneven counter loads, and zero
+                  visibility into queue status — how many had been served, how
+                  many were still waiting.
+                </p>
+                <p class="solution">
+                  <span>What I did: </span>designed and developed the Queue
+                  Management System (QMS) — a real-time, network-based system
+                  that brings order to the walk-in queue, gives staff the
+                  tools to manage it directly from their counters, and gives
+                  administrators full visibility and control over daily
+                  operations.
+                </p>
+              </div>
+              <a href="https://github.com/arielcorteldev/qms-v1" class="btn btn-sm btn-secondary">View in Github</a>
+            </div>
+          </div>
+
+          <div class="project-container" data-reveal>
+            <div class="thumbnail">
+              <img
+                src="./assets/images/everify-thumbnail.webp"
+                alt="National ID Authentication Service Integration (eVerify) project thumbnail"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-details">
+                <h3 class="project-title">
+                  National ID Authentication Service Integration (eVerify)
+                </h3>
+
+                <div class="tech-stack">
+                  <p>Flask</p>
+                  <p>Python</p>
+                  <p>PySide6</p>
+                </div>
+
+                <div class="texts">
+                  <p class="problem">
+                    <span>Problem: </span>The City Civil Registrar's Office of
+                    Maasin City had no formal process for verifying client
+                    identities before releasing vital records. With no
+                    authentication step in place, the office was exposed to
+                    fraud risk and potential Data Privacy Act violations —
+                    anyone could claim to be someone else and walk out with
+                    sensitive documents.
+                  </p>
+                  <p class="solution">
+                    <span>What I did: </span>I integrated the Philippine
+                    Statistics Authority's National ID Authentication Service
+                    directly into the Records Verification System. The feature
+                    authenticates clients via QR code scan or personal details
+                    entry, followed by a face liveness check — confirming the
+                    person presenting the ID is physically present. Built with
+                    Python, PySide6, and Flask, it adds a compliant identity
+                    verification layer to the records release workflow without
+                    disrupting staff operations.
+                  </p>
+                </div>
+
+              <a href="https://github.com/arielcorteldev/everify" class="btn btn-sm btn-secondary">View in Github</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" data-reveal>
+        <h2>my services</h2>
+        <div class="services-grid">
+          <div class="skill" data-reveal>
+            <div class="skill-title">
+              <h3 class="title">Web App Development</h3>
+              <p>Build modern, fast web apps.</p>
+            </div>
+            <img
+              id="illustration-1"
+              data-light-src="./assets/illustrations/svg/web-app-black.svg"
+              data-dark-src="./assets/illustrations/svg/web-app-grey.svg"
+              alt="Web application development illustration"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>
+              Turn your idea into a fully functional web application that works
+              smoothly on any device.
+            </p>
+          </div>
+          <div class="skill" data-reveal>
+            <div class="skill-title">
+              <h3 class="title">UI/UX Design</h3>
+              <p>Design how it works, not just how it looks.</p>
+            </div>
+            <img
+              id="illustration-2"
+              data-light-src="./assets/illustrations/svg/uiux-design-black.svg"
+              data-dark-src="./assets/illustrations/svg/uiux-design-grey.svg"
+              alt="UI and UX design illustration"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>
+              I create clean, intuitive interfaces that guide users naturally
+              and make tasks easy.
+            </p>
+          </div>
+          <div class="skill" data-reveal>
+            <div class="skill-title">
+              <h3 class="title">Design Systems</h3>
+              <p>Keep everything consistent as you grow.</p>
+            </div>
+            <img
+              id="illustration-3"
+              data-light-src="./assets/illustrations/svg/design-systems-black.svg"
+              data-dark-src="./assets/illustrations/svg/design-systems-grey.svg"
+              alt="Design systems illustration"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>
+              I design reusable layouts and patterns so your product stays
+              consistent and easier to maintain over time.
+            </p>
+          </div>
+          <div class="skill" data-reveal>
+            <div class="skill-title">
+              <h3 class="title">Frontend Development & Animations</h3>
+              <p>Bring your product to life.</p>
+            </div>
+            <img
+              id="illustration-4"
+              data-light-src="./assets/illustrations/svg/frontend-animate-black.svg"
+              data-dark-src="./assets/illustrations/svg/frontend-animate-grey.svg"
+              alt="Frontend development and animation illustration"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>
+              From precise layouts to smooth interactions, I make your design
+              feel polished and responsive.
+            </p>
+          </div>
+          <div class="skill" data-reveal>
+            <div class="skill-title">
+              <h3 class="title">Interactivity & Logic</h3>
+              <p>Make your product actually work.</p>
+            </div>
+            <img
+              id="illustration-5"
+              data-light-src="./assets/illustrations/svg/interactivity-black.svg"
+              data-dark-src="./assets/illustrations/svg/interactivity-grey.svg"
+              alt="Interactivity and logic illustration"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>
+              Forms, user actions, real-time updates — I build the features that
+              make your product useful.
+            </p>
+          </div>
+          <div class="skill" data-reveal>
+            <div class="skill-title">
+              <h3 class="title">Problem-Solving</h3>
+              <p>Solve real product challenges.</p>
+            </div>
+            <img
+              id="illustration-6"
+              data-light-src="./assets/illustrations/svg/problem-solving-black.svg"
+              data-dark-src="./assets/illustrations/svg/problem-solving-grey.svg"
+              alt="Problem-solving illustration"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>
+              Whether it's a broken feature or a messy system, I find practical
+              solutions that move things forward.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me Section -->
+      <section id="about-me" data-reveal>
+        <h2>about me</h2>
+        <div class="container">
+          <img
+            id="illustration-7"
+            data-light-src="./assets/illustrations/svg/programmer-black.svg"
+            data-dark-src="./assets/illustrations/svg/programmer-grey.svg"
+            alt="About Me Illustration"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="texts">
+            <p class="headline">
+              I bridge the gap between architectural logic and visual clarity.
+            </p>
+            <p>
+              My background in IT operations within the public sector has taught
+              me that the most impactful digital tools are those built on
+              robust, reliable systems. I don't just design surfaces; I think in
+              connections, workflows, and structural integrity. As a Design
+              Engineer, I focus on building functional systems where the code is
+              as intentional as the interface.
+            </p>
+            <p>
+              I approach frontend development with a "systems-first" mindset.
+              Whether I’m refining a design system or engineering a service
+              booking platform, my goal is to translate complex organizational
+              needs into seamless user experiences. I believe that design is a
+              problem-solving engine, not just a layer of paint, and I build
+              with a focus on how every component connects to the larger whole.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Contact Me Section -->
+      <section id="contact-me" data-reveal>
+        <h2>
+          Have a project in mind?<br />
+          Let's build it.
+        </h2>
+        <a href="mailto:acortel12@gmail.com" class="btn btn-primary btn-lg">acortel12@gmail.com</a>
+      </section>
+    </main>
+
+
+    <footer>
+      <p class="footer-title">©ariel cortel</p>
+      <div class="container">
+        <div class="copyright">
+          <img
+            class="logo"
+            data-light-src="./assets/logos/logo-black.webp"
+            data-dark-src="./assets/logos/logo-white.webp"
+            alt="My Logo"
+            height="50"
+            width="50"
+            loading="lazy"
+            decoding="async"
+          />
+          <span>Copyright @ 2026 ariel cortel. All rights reserved.</span>
+        </div>
+        <div class="socials">
+          <a
+            href="https://x.com/arielcorteldev"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X (Twitter)"
+          >
+            <svg
+              class="social-icon"
+              aria-hidden="true"
+              focusable="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M18.9 2H22l-6.8 7.8L23 22h-6.4l-5-6.5L6 22H3l7.3-8.4L1 2h6.6l4.5 6L18.9 2Zm-1.1 18h1.7L6.7 3.9H4.9L17.8 20Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/arielcorteldev"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <svg
+              class="social-icon"
+              aria-hidden="true"
+              focusable="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.57.1.78-.25.78-.55v-2.1c-3.18.7-3.85-1.35-3.85-1.35-.52-1.33-1.26-1.68-1.26-1.68-1.03-.7.08-.69.08-.69 1.14.08 1.73 1.17 1.73 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.52-2.54-.29-5.2-1.27-5.2-5.66 0-1.25.45-2.27 1.17-3.07-.12-.29-.5-1.47.11-3.06 0 0 .96-.31 3.14 1.17a10.8 10.8 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.61 1.59.23 2.77.11 3.06.73.8 1.17 1.82 1.17 3.07 0 4.4-2.67 5.37-5.22 5.65.41.36.78 1.06.78 2.14v3.17c0 .3.2.65.79.55A11.5 11.5 0 0 0 12 .5Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ariel-cortel-573276392/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <svg
+              class="social-icon"
+              aria-hidden="true"
+              focusable="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.66-1.85 3.41-1.85 3.65 0 4.32 2.4 4.32 5.52v6.22ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer> 
+
+    <!-- tests -->
+    <!-- <button class="btn btn-primary">click me</button>
+    <button class="btn btn-secondary">click me</button>
+    <button class="btn btn-tertiary">click me</button>
+    <img id="logo" data-light-src="./assets/logos/logo-black.webp" data-dark-src="./assets/logos/logo-white.webp" alt="My Logo" height="100" width="100">
+    <img id="illustration-1" data-light-src="./assets/illustrations/svg/design-systems-black.svg" data-dark-src="./assets/illustrations/svg/design-systems-grey.svg" alt="Illustration 1" height="100" width="100"> -->
+  </body>
+
+</html>
